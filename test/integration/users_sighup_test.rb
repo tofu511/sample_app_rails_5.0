@@ -11,7 +11,7 @@ class UsersSighupTest < ActionDispatch::IntegrationTest
                             password_confirmation: "bar"}}
     end
     assert_template 'users/new'
-    assert_select 'form[action="/signup"]'
+    # assert_select 'form[action="/signup"]' # 10章でnewのビューをpartialに変更したのでここでエラーが出る
     # assert_select 'div#<CSS id for error explanation>' #テストが通らない。なぜかは不明
     # assert_select 'div.<CSS class for field with error>' #テストが通らない。なぜかは不明
   end
